@@ -34,7 +34,3 @@ workflows:
     artifacts:
       - flutter_drive.log
       - build/macos/Build/Products/Release/*.app
-    publishing:
-      app_store_connect: # For iOS app
-        apple_id: arnold@nevercode.io # Email address used for login
-        password: Encrypted(Z0FBQUFBQmdLcGNFclk3VktPWmtmZmRTMEwtdi00R2xzV0FHc1Rpc3k1SEw2WENrMThqTEJFZDQzTlREd3Y3N1ZsZklKREIwWEt5QXJEa3JHUi02bXVuMTQ2R1Y1dVJFRUZKdGdxV3Q4UzNYWEhTa255dTZwOGc9) # App-specific password

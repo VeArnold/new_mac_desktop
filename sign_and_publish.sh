@@ -30,4 +30,4 @@ codesign -s "$DEV_CERT" -f --entitlements entitlements.plist "$APP_PATH"
 
 xcrun productbuild --component $APP_PATH /Applications/ $PKG_PATH_UNSIGNED
 xcrun productsign --sign $INSTALLER_CERT $PKG_PATH_UNSIGNED $PKG_PATH
-xcrun altool --upload-app --file $PKG_PATH --type osx --username arnold@nevercode.io --password fbqd-otii-whmv-irlx
+xcrun altool --upload-app --file $PKG_PATH --type osx --username $APPLE_ID --password $APPLE_PASSWORD

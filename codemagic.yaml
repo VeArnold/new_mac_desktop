@@ -28,7 +28,9 @@ workflows:
         echo ${MB_PROVISIONING_PROFILE} | base64 --decode > "$PROFILE_PATH"
         echo "Saved provisioning profile $PROFILE_PATH"
         xcode-project use-profiles
-      - flutter build macos
+      - |
+        flutter config --enable-macos-desktop
+        flutter build macos
     artifacts:
       - flutter_drive.log
       - build/macos/Build/Products/Release/*.app

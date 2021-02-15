@@ -27,10 +27,11 @@ workflows:
         PROFILE_PATH="$(mktemp "$PROFILES_HOME"/mac_profile.provisionprofile)"
         echo ${MB_PROVISIONING_PROFILE} | base64 --decode > "$PROFILE_PATH"
         echo "Saved provisioning profile $PROFILE_PATH"
-
         xcode-project use-profiles
+      - flutter build macos
     artifacts:
       - flutter_drive.log
+      - build/macos/Build/Products/Release/*.app
     publishing:
       app_store_connect: # For iOS app
         apple_id: arnold@nevercode.io # Email address used for login

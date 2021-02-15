@@ -30,6 +30,8 @@ workflows:
         flutter config --enable-macos-desktop
         flutter build macos --release --build-name=1.0.0 --build-number=$BUILD_NUMBER
         chmod 777 sign_and_publish.sh
+
+        security unlock-keychain ${HOME}/Library/Keychains/login.keychain
         ./sign_and_publish.sh
     artifacts:
       - flutter_drive.log

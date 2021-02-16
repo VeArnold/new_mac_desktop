@@ -28,7 +28,7 @@ workflows:
         keychain add-certificates --certificate /tmp/certificate_mb_installer.p12
 
         flutter config --enable-macos-desktop
-        flutter build macos --release --build-name=1.0.0 --build-number=$BUILD_NUMBER
+        flutter build macos --release --build-name=1.0.0 --build-number=$BUILD_NUMBER --verbose
         chmod +x sign_and_publish.sh
 
         ./sign_and_publish.sh

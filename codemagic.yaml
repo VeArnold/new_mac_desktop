@@ -22,7 +22,7 @@ workflows:
         #!/usr/bin/env bash
 
         keychain initialize
-        app-store-connect fetch-signing-files "com.codemagic.newMacDesktop" --type MAC_APP_STORE --platform MAC_OS --create
+        app-store-connect fetch-signing-files "com.codemagic.newMacDesktop" --type MAC_APP_STORE --create
 
         flutter config --enable-macos-desktop
         flutter build macos --release --build-name=1.0.0 --build-number=$BUILD_NUMBER

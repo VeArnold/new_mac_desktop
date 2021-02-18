@@ -34,4 +34,4 @@ workflows:
         ./sign_and_publish.sh
     artifacts:
       - flutter_drive.log
-      - build/macos/Build/Products/Release/*.app
+      - build/macos/Build/Products/Release/*.pkg

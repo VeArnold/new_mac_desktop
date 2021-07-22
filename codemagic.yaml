@@ -11,7 +11,7 @@ workflows:
         ROLLBAR_ACCESS_TOKEN: Encrypted(Z0FBQUFBQmZ2UnFBMXk3b3pOcjI4eHpobTVjSWtWaHRCaHgwdXR6RkhSbnRLa0s3YlpfbFRDZWtHOHF1ampYSUx3eFF3ZjIydnlkTTVWeWJRSUhyelBoM2lnTU9uUnd3ajZvVGszaG9hZHYxaVhDdTRRaFlCN01GblBPcVFsNmpNaXZtSVRWdm1OTUs=)
 
     scripts:
-      - echo $AWS_SECRET_ACCES_KEY
+      - echo $AWS_SECRET_ACCESS_KEY
       - echo $ROLLBAR_ACCESS_TOKEN
       - sleep 120
     artifacts:

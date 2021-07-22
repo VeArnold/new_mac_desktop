@@ -10,10 +10,9 @@ workflows:
         AWS_SECRET_ACCESS_KEY: Encrypted(Z0FBQUFBQmZ1LWx5Zk9qSGlfQXlLWmxSNXdXWTBzV1k0M3VQdVd0eW10dDI4SlpCOE5rTnVVc2duVFlFb1E3d25IWmF2WXlhNVJrRnZrRWpnZGw2Rjl4VlNzTlZTcTZOTGgzVmU2dk5pc3NVczZoeUM2Y3doZG9Wbm1UbTliRlBSM3I2RGYxZEF5cHI=)
         ROLLBAR_ACCESS_TOKEN: Encrypted(Z0FBQUFBQmZ2UnFBMXk3b3pOcjI4eHpobTVjSWtWaHRCaHgwdXR6RkhSbnRLa0s3YlpfbFRDZWtHOHF1ampYSUx3eFF3ZjIydnlkTTVWeWJRSUhyelBoM2lnTU9uUnd3ajZvVGszaG9hZHYxaVhDdTRRaFlCN01GblBPcVFsNmpNaXZtSVRWdm1OTUs=)
 
-      flutter: dev
-      xcode: latest
-      cocoapods: default
     scripts:
+      - echo $AWS_SECRET_ACCES_KEY
+      - echo $ROLLBAR_ACCESS_TOKEN
       - sleep 120
     artifacts:
       - flutter_drive.log

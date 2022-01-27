@@ -18,3 +18,25 @@ jobs:
           echo "action_state='${{ env.action_state2 }}'"
           echo "action_state='${{ env.action_state3 }}'"
           echo "action_state='${{ env.action_state4 }}'"
+      - name: Set the multiline value
+        id: step_three
+        run: |
+          echo 'JSON_RESPONSE1<<EOF' >> $GITHUB_ENV
+          curl https://httpbin.org/json >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+          echo 'JSON_RESPONSE2<< EOF' >> $GITHUB_ENV
+          curl https://httpbin.org/json >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+          echo 'JSON_RESPONSE3 <<EOF' >> $GITHUB_ENV
+          curl https://httpbin.org/json >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+          echo 'JSON_RESPONSE4 << EOF' >> $GITHUB_ENV
+          curl https://httpbin.org/json >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+      - name: Use the multiline value
+        id: step_four
+        run: |
+          echo "resp='${{ env.JSON_RESPONSE1 }}'"
+          echo "resp='${{ env.JSON_RESPONSE2 }}'"
+          echo "resp='${{ env.JSON_RESPONSE3 }}'"
+          echo "resp='${{ env.JSON_RESPONSE4 }}'"

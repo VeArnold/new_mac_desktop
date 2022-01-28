@@ -20,6 +20,16 @@ jobs:
           echo "action_state='${{ env.action_state3 }}'"
           echo "action_state='${{ env.action_state4 }}'"
           echo "action_state='${{ env.action_state5 }}'"
+      - name: Set the value
+        id: test_step_one
+        run: |
+          echo 'JSON_RESPONSE2<< EOF' >> $GITHUB_ENV
+          curl https://httpbin.org/json >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+      - name: Use the value
+        id: test_step_two
+        run: |
+          echo "resp='${{ env.JSON_RESPONSE2 }}'"
       - name: Set the multiline value
         id: step_three
         run: |
